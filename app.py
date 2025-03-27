@@ -8,7 +8,7 @@ m=st.number_input('Enter Maritial status  0:No 1:Yes')
 ai=st.number_input('Enter Applicant Income in thousands')
 la=st.number_input('Enter loan amount in thousands')
 if st.button('PREDICT'):
-    prediction=df.predict([[g,m,ai,la]])
+    prediction=clf.predict([[g,m,ai,la]])
     if prediction=='Y':
         st.text('LOAN IS APPROVED')
     else:
